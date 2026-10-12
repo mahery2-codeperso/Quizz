@@ -55,19 +55,19 @@ button:hover {
 }
 
 .despawn {
-    animation: disparition 0.5s ease;
+    animation: disparition 0.7s ease;
 }
 
 .spawn {
-    animation: apparition 0.5s ease;
+    animation: apparition 0.75s ease;
 }
 
 .spawn-btn-valide {
-    animation: apparition 0.5s ease;
+    animation: apparition 0.75s ease;
 }
 
 .despawn-btn-valide {
-    animation: disparition-btn-valide 0.5s ease;
+    animation: disparition-btn-valide 0.7s ease;
 }
 
 h1, h2, h3 {
@@ -132,6 +132,12 @@ header {
         opacity: 0.9;
         box-shadow: 0 0 10px rgb(129, 128, 128);
     }
+
+    .selected {
+    background-color: rgb(194, 192, 192);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(129, 128, 128);
+    }
 }
 
 /* ----- header ------------------------------------------------------------------------------ header ----- */
@@ -145,6 +151,7 @@ main {
     transition: all 0.235s ease;
     min-width: 100%;
     min-height: 100vh;
+    padding-bottom: 5rem;
 }
 
 main h1 {
@@ -154,10 +161,13 @@ main h1 {
 .bienvenue {
 }
 
-.question {
-    position: absolute;
+.start {
     text-align: center;
-    top : 20%;
+    margin-top: 40%;
+}
+.question {
+    text-align: center;
+    margin-top: 40%;
 }
 
 .reponse h2 {
@@ -166,16 +176,29 @@ main h1 {
 }
 
 .choix {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
 }
 
 .btn-reponse {
-    min-width: 5%;
     padding: 1rem 2rem;
     margin: 0.5rem;
+    min-width: 50%;
+    max-width: 200px;
+    justify-content: center;
 }
 
-.btn-valide .btn-pass {
+.btn-reponse.selected {
+    background-color: rgb(134, 133, 133);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(126, 125, 125);
+}
+
+
+
+.btn-pass {
     margin : 1rem 0 0 0;
 }
 
@@ -183,9 +206,18 @@ main h1 {
 }
 
 .btn-pass {
-    position: absolute;
-    justify-content: center;
     margin-top: 0.7rem;
+}
+
+.tabRecap {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.recap {
+    text-align: center;
+    margin-top: 20%;
 }
 
 /* ----- main ------------------------------------------------------------------------------ main ----- */
@@ -204,7 +236,8 @@ main h1 {
     /* ----- main ------------------------------------------------------------------------------ main ----- */
 
     main {
-        left: 33.75%;
+        left: auto;
+        text-align: center;
     }
 
     main h1 {
@@ -213,6 +246,47 @@ main h1 {
 
     .reponse h2 {
     max-width: 100%;
-}
+    }
+
+    .start {
+        min-width: 100%;
+        margin-top: 10%;
+        padding-bottom: 1rem;
+    }
+
+    .question {
+        min-width: 100%;
+        margin-top: 10%;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .choix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    }
+
+    .btn-reponse {
+        min-width: 100%;
+        max-width: 5rem;
+    }
+
+    .btn-pass {
+        top: 100%;
+    }
+
+    .tabRecap {
+    gap: 10rem;
+    }
+
+    .recap {
+    min-width: 100%;
+    margin-top: 5%;
+    padding-bottom: 1rem;
+    }
 
 }
