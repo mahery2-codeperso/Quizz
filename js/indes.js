@@ -1,3 +1,11 @@
+/*
+
+- Remettre la liste des réponses et bonnes réponses à jour
+
+*/
+
+
+
 // bouton
 const btn_mode = document.querySelector(".dl");
 const btn_start = document.querySelectorAll(".btn-start");

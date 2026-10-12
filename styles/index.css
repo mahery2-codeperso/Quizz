@@ -270,6 +270,10 @@ main h1 {
     margin: 20px auto;
     }
 
+    .choix2 {
+        max-width: 775px;
+    }
+
     .btn-reponse {
         min-width: 100%;
         max-width: 5rem;
